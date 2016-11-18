@@ -24,22 +24,25 @@ A polymer element to mock-up how instagram sponsored posts appear.
         </style>
 
         <div style="padding:12px;display:flex;align-content:center;justify-content:space-between;">
-            <span><img src="http://placehold.it/30x30" style="float:left;margin-right:8px;border-radius:15px;">jaspersmarket</span><span style="color:#999;">Sponsored</span>
+            <span><img src="http://placehold.it/30x30" style="float:left;margin-right:8px;border-radius:15px;">[[title]]</span><span style="color:#999;">Sponsored</span>
         </div>
-            <img src="http://placehold.it/327x249" style="max-width:max-content;">
+          <content select="img" style="max-width:max-content;">
+              <img src="http://placehold.it/327x249" style="max-width:max-content;">
+          </content>
+            
         <div style="padding:0px 12px;display:flex;align-content:center;justify-content:space-between;">
             <span>Heart  Comment</span><span style="border:1px solid #1c8bb6;border-radius:3px;text-transform:uppercase;font-size:10px;padding:4px 12px;color:#1c8bb6;">Learn More</span>
         </div>
         <hr>
             <div style="padding:10px 12px;padding-top:0;">
-                <p style="font-size:12px;">Use our app and get delicious recipes for Jasper's Market lastest produce. It's fun.easy. and most of all, free!</p>
+                <p style="font-size:12px;">[[title]] Use our app and get delicious recipes for Jasper's Market lastest produce. It's fun.easy. and most of all, free!</p>
             </div>
     </template>
 
   <script>
     Polymer({
-
-      is: 'mockup-instagram'
+      is: 'mockup-instagram',
+      properties: {title: {type: String,value: 'jaspersmarket'}}
     });
   </script>
 </dom-module>
