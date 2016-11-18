@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/tim-mehlhorn/mockup-instagram.svg?branch=master)](https://travis-ci.org/tim-mehlhorn/mockup-instagram)
 # \<mockup-instagram\>
 
 A polymer element to mock-up how instagram sponsored posts appear.
