@@ -1,0 +1,45 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`mockup-instagram`
+A polymer element to mock-up how instagram sponsored posts appear.
+
+@demo demo/index.html 
+-->
+
+<dom-module id="mockup-instagram">
+      <template>
+        <style>
+            :host {
+                display: block;
+                margin:1em;
+                width:327px;
+                border: 1px solid;
+                border-radius: 3px;
+                border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+            }
+            #likebtn{background-color: #e9ebee;color:#4b4f56;border:1px solid;border-radius: 2px;border-color:#ced0d4;padding: 0 8px;line-height:22px;float: right;margin-right: 20px;}
+            #CTAbtn{background-color: #e9ebee;color:#4b4f56;border:1px solid;border-radius: 2px;border-color:#ced0d4;padding: 0 8px;line-height:22px;float: right;display: inline-block;}
+            .socialact{margin-right: 10px;color:#7f7f7f;}
+        </style>
+
+        <div style="padding:12px;display:flex;align-content:center;justify-content:space-between;">
+            <span><img src="http://placehold.it/30x30" style="float:left;margin-right:8px;border-radius:15px;">jaspersmarket</span><span style="color:#999;">Sponsored</span>
+        </div>
+            <img src="http://placehold.it/327x249" style="max-width:max-content;">
+        <div style="padding:0px 12px;display:flex;align-content:center;justify-content:space-between;">
+            <span>Heart  Comment</span><span style="border:1px solid #1c8bb6;border-radius:3px;text-transform:uppercase;font-size:10px;padding:4px 12px;color:#1c8bb6;">Learn More</span>
+        </div>
+        <hr>
+            <div style="padding:10px 12px;padding-top:0;">
+                <p style="font-size:12px;">Use our app and get delicious recipes for Jasper's Market lastest produce. It's fun.easy. and most of all, free!</p>
+            </div>
+    </template>
+
+  <script>
+    Polymer({
+
+      is: 'mockup-instagram'
+    });
+  </script>
+</dom-module>
