@@ -74,9 +74,19 @@ A polymer element to mock-up how instagram sponsored posts appear.
     <script>
     Polymer({
       is: 'mockup-instagram',
-      properties: {title: {type: String,value: 'jaspersmarket'},
-                   cta: {type: String,value: 'Learn More'},
-                   icon: {type: String,value: 'http://placehold.it/30x30'}
+      properties: {
+          /**
+          * The title of the element is the Instagram name to be used in the mock-up. 
+          */
+          title: {type: String,value: 'jaspersmarket'},
+          /**
+          * The Call-To-Action button in the mock-up. Current valid CTAs are Book Now, Contact Us, Download, Learn More, Shop Now, Sign Up, Watch More and Apply Now.
+          */         
+          cta: {type: String,value: 'Learn More'},
+          /**
+          * Image url for the Instragram profile icon.
+          */         
+          icon: {type: String,value: 'http://placehold.it/30x30'}
                    }
     });
   </script>
