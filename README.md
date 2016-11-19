@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/tim-mehlhorn/mockup-instagram.svg?branch=master)](https://travis-ci.org/tim-mehlhorn/mockup-instagram)
+[![Build Status](https://travis-ci.org/tim-mehlhorn/mockup-instagram.svg?branch=master)](https://travis-ci.org/tim-mehlhorn/mockup-instagram)[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://beta.webcomponents.org/element/owner/my-element)
+
 # \<mockup-instagram\>
 
 A polymer element to mock-up how instagram sponsored posts appear.
