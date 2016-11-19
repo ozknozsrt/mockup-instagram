@@ -13,6 +13,12 @@ $ bower install --save tim-mehlhorn/mockup-instagram
 
 This element is designed to mock-up what an Instragram sponsored would look like without have to go through the Ad creation process on Facebook.
 
+Instagram username (title prop), Instagram Icon, and CTA are all properties for the element.
+
+The first img tag within the element will be used as the post image.
+
+The first span tag within the element will be used as the post text copy.
+
 ##Demo
 <!--
 ```
