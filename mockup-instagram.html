@@ -50,7 +50,7 @@ A polymer element to mock-up how instagram sponsored posts appear.
         </style>
 
         <div style="padding:12px;display:flex;align-content:center;justify-content:space-between;">
-            <span><img src="http://placehold.it/30x30" style="float:left;margin-right:8px;border-radius:15px;">[[title]]</span>
+            <span><img src=[[icon]] style="float:left;margin-right:8px;border-radius:15px;">[[title]]</span>
             <span style="color:#999;display:flex;align-content:center;">Sponsored<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="#999" d="M7.4 7.84l4.6 4.58 4.6-4.58 1.4 1.4-6 6-6-6z"/></svg></span>
         </div>
         <content select="img" style="max-width:max-content;">
@@ -75,7 +75,8 @@ A polymer element to mock-up how instagram sponsored posts appear.
     Polymer({
       is: 'mockup-instagram',
       properties: {title: {type: String,value: 'jaspersmarket'},
-                   cta: {type: String,value: 'Learn More'}
+                   cta: {type: String,value: 'Learn More'},
+                   icon: {type: String,value: 'http://placehold.it/30x30'}
                    }
     });
   </script>
