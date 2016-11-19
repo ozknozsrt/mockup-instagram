@@ -8,41 +8,75 @@ A polymer element to mock-up how instagram sponsored posts appear.
 -->
 
 <dom-module id="mockup-instagram">
-      <template>
+    <template>
         <style>
             :host {
                 display: block;
-                margin:1em;
-                width:327px;
+                margin: 1em;
+                width: 327px;
                 border: 1px solid;
                 border-radius: 3px;
                 border-color: #e5e6e9 #dfe0e4 #d0d1d5;
             }
-            #likebtn{background-color: #e9ebee;color:#4b4f56;border:1px solid;border-radius: 2px;border-color:#ced0d4;padding: 0 8px;line-height:22px;float: right;margin-right: 20px;}
-            #CTAbtn{background-color: #e9ebee;color:#4b4f56;border:1px solid;border-radius: 2px;border-color:#ced0d4;padding: 0 8px;line-height:22px;float: right;display: inline-block;}
-            .socialact{margin-right: 10px;color:#7f7f7f;}
+            
+            #likebtn {
+                background-color: #e9ebee;
+                color: #4b4f56;
+                border: 1px solid;
+                border-radius: 2px;
+                border-color: #ced0d4;
+                padding: 0 8px;
+                line-height: 22px;
+                float: right;
+                margin-right: 20px;
+            }
+            
+            #CTAbtn {
+                background-color: #e9ebee;
+                color: #4b4f56;
+                border: 1px solid;
+                border-radius: 2px;
+                border-color: #ced0d4;
+                padding: 0 8px;
+                line-height: 22px;
+                float: right;
+                display: inline-block;
+            }
+            .socialact {
+                margin-right: 10px;
+                color: #7f7f7f;
+            }
+            p{display:inline;}
         </style>
 
         <div style="padding:12px;display:flex;align-content:center;justify-content:space-between;">
-            <span><img src="http://placehold.it/30x30" style="float:left;margin-right:8px;border-radius:15px;">[[title]]</span><span style="color:#999;">Sponsored</span>
+            <span><img src="http://placehold.it/30x30" style="float:left;margin-right:8px;border-radius:15px;">[[title]]</span>
+            <span style="color:#999;display:flex;align-content:center;">Sponsored<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="#999" d="M7.4 7.84l4.6 4.58 4.6-4.58 1.4 1.4-6 6-6-6z"/></svg></span>
         </div>
-          <content select="img" style="max-width:max-content;">
-              <img src="http://placehold.it/327x249" style="max-width:max-content;">
-          </content>
-            
+        <content select="img" style="max-width:max-content;">
+            <img src="http://placehold.it/327x249" style="max-width:max-content;">
+        </content>
+
         <div style="padding:0px 12px;display:flex;align-content:center;justify-content:space-between;">
-            <span>Heart  Comment</span><span style="border:1px solid #1c8bb6;border-radius:3px;text-transform:uppercase;font-size:10px;padding:4px 12px;color:#1c8bb6;">Learn More</span>
+            <span>
+             <svg style="margin-right:10px;" xmlns="http://www.w3.org/2000/svg" id="Layer_1" width="18.72" height="17.96" data-name="Layer 1"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;}</style></defs><path d="M17.42 8.18a4.85 4.85 0 0 0-8-5.48 4.85 4.85 0 1 0-8 5.48l7.9 9z" class="cls-1"/></svg>
+             <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" width="18.9" height="19.1" data-name="Layer 1"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;}</style></defs><path d="M18 18.2l-1.4-3.8a8.8 8.8 0 1 0-2.3 2.3z" class="cls-1"/></svg>
+             </span>
+            <span style="border:1px solid #1c8bb6;border-radius:3px;text-transform:uppercase;font-size:10px;padding:4px 12px;color:#1c8bb6;">[[cta]]</span>
         </div>
         <hr>
-            <div style="padding:10px 12px;padding-top:0;">
-                <p style="font-size:12px;">[[title]] Use our app and get delicious recipes for Jasper's Market lastest produce. It's fun.easy. and most of all, free!</p>
-            </div>
+        <div style="padding:10px 12px;padding-top:0;font-size:12px;margin-bottom: 18px;">
+            [[title]]
+            <content select="span" style="display:inline;"> Use our app and get delicious recipes for Jasper's Market lastest produce. It's fun.easy. and most of all, free!</content>
+        </div>
     </template>
 
-  <script>
+    <script>
     Polymer({
       is: 'mockup-instagram',
-      properties: {title: {type: String,value: 'jaspersmarket'}}
+      properties: {title: {type: String,value: 'jaspersmarket'},
+                   cta: {type: String,value: 'Learn More'}
+                   }
     });
   </script>
 </dom-module>
