@@ -1,16 +1,15 @@
+<!DOCTYPE html>
 <link rel="import" href="../polymer/polymer.html">
-
 <!--
 `mockup-instagram`
 A polymer element to mock-up how instagram sponsored posts appear.
 
 @demo demo/index.html 
 -->
-
 <dom-module id="mockup-instagram">
     <template>
         <style>
-            :host {
+             :host {
                 display: block;
                 margin: 1em;
                 width: 327px;
@@ -19,75 +18,134 @@ A polymer element to mock-up how instagram sponsored posts appear.
                 border-color: #e5e6e9 #dfe0e4 #d0d1d5;
             }
             
-            #likebtn {
-                background-color: #e9ebee;
-                color: #4b4f56;
-                border: 1px solid;
-                border-radius: 2px;
-                border-color: #ced0d4;
-                padding: 0 8px;
-                line-height: 22px;
-                float: right;
-                margin-right: 20px;
+            p {
+                display: inline;
             }
             
-            #CTAbtn {
-                background-color: #e9ebee;
-                color: #4b4f56;
-                border: 1px solid;
-                border-radius: 2px;
-                border-color: #ced0d4;
-                padding: 0 8px;
-                line-height: 22px;
-                float: right;
-                display: inline-block;
+            .cta {
+                font-size: 10pt;
+                padding: 4px 12px;
+                color: #1c8bb6;
+                font-weight: bold;
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid #e6e6e6;
+                margin: 0 10px 0 10px;
+                padding: 8px 0px;
             }
-            .socialact {
-                margin-right: 10px;
-                color: #7f7f7f;
+            
+            .textcontent {
+                padding: 10px 12px;
+                font-size: 12px;
+                margin-bottom: 18px;
             }
-            p{display:inline;}
+            
+            .topbar {
+                padding: 12px;
+                display: flex;
+                align-content: center;
+                justify-content: space-between;
+            }
+            
+            .topbar span {
+                line-height: 11pt;
+            }
+            
+            .topbar span img {
+                float: left;
+                margin-right: 8px;
+                border-radius: 15px;
+            }
+            
+            .interactionbtns {
+                padding: 8px 0px;
+                border-bottom: 1px solid #e6e6e6;
+                margin: 0 10px 0 10px;
+                display: flex;
+                align-content: center;
+                justify-content: space-between;
+            }
+            
+            .interactionbtns span {
+                width: 95px;
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            path {
+                fill: none;
+                stroke-miterlimit: 10;
+                stroke: #000000;
+            }
         </style>
-
-        <div style="padding:12px;display:flex;align-content:center;justify-content:space-between;">
-            <span><img src=[[icon]] style="float:left;margin-right:8px;border-radius:15px;">[[title]]</span>
-            <span style="color:#999;display:flex;align-content:center;">Sponsored<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="#999" d="M7.4 7.84l4.6 4.58 4.6-4.58 1.4 1.4-6 6-6-6z"/></svg></span>
+        <div class="topbar">
+            <span>
+                <img src="[[icon]]">
+                <b>[[title]]</b>
+                <br>
+                <small>Sponsored</small>
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32" width="20" height="20">
+                <circle cx="7.1" cy="16.4" r="3.1" />
+                <circle cx="16.5" cy="16.4" r="3.1" />
+                <circle cx="25.9" cy="16.4" r="3.1" />
+            </svg>
         </div>
         <content select="img" style="max-width:max-content;">
             <img src="http://placehold.it/327x249" style="max-width:max-content;">
         </content>
-
-        <div style="padding:0px 12px;display:flex;align-content:center;justify-content:space-between;">
-            <span>
-             <svg style="margin-right:10px;" xmlns="http://www.w3.org/2000/svg" id="Layer_1" width="18.72" height="17.96" data-name="Layer 1"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;}</style></defs><path d="M17.42 8.18a4.85 4.85 0 0 0-8-5.48 4.85 4.85 0 1 0-8 5.48l7.9 9z" class="cls-1"/></svg>
-             <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" width="18.9" height="19.1" data-name="Layer 1"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;}</style></defs><path d="M18 18.2l-1.4-3.8a8.8 8.8 0 1 0-2.3 2.3z" class="cls-1"/></svg>
-             </span>
-            <span style="border:1px solid #1c8bb6;border-radius:3px;text-transform:uppercase;font-size:10px;padding:4px 12px;color:#1c8bb6;">[[cta]]</span>
+        <div class="cta">[[cta]]
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32" width="15" height="15">
+                <path d="M10 3l13.2 13-13 14" style="stroke: #1c8bb6;stroke-width: 5;" />
+            </svg>
         </div>
-        <hr>
-        <div style="padding:10px 12px;padding-top:0;font-size:12px;margin-bottom: 18px;">
-            [[title]]
+        <div class="interactionbtns">
+            <span>
+             <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" width="20" height="20">
+                 <path d="M17.42 8.18a4.85 4.85 0 0 0-8-5.48 4.85 4.85 0 1 0-8 5.48l7.9 9z"/>
+                 </svg>
+             <svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" width="20" height="20">
+                 <path d="M18 18.2l-1.4-3.8a8.8 8.8 0 1 0-2.3 2.3z"/>
+                 </svg>
+             <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 39.4 39.3" width="20" height="20">
+             <path d="M20.2 35.4L17 18.8 3 6.4h34.5zM17 18.8L37.4 6.4" style="stroke-width: 2;"/>
+             </svg>
+             </span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 46 46.3" width="20" height="20">
+                <path d="M10.2 3.4v39.3L24.4 29l12.8 14.6V3.4z" style="stroke-width: 2;" />
+            </svg>
+        </div>
+        <div class="textcontent">
+            <b>[[title]] </b>
             <content select="span" style="display:inline;"> Use our app and get delicious recipes for Jasper's Market lastest produce. It's fun.easy. and most of all, free!</content>
         </div>
     </template>
-
     <script>
-    Polymer({
-      is: 'mockup-instagram',
-      properties: {
-          /**
-          * The title of the element is the Instagram name to be used in the mock-up. 
-          */
-          title: {type: String,value: 'jaspersmarket'},
-          /**
-          * The Call-To-Action button in the mock-up. Current valid CTAs are Book Now, Contact Us, Download, Learn More, Shop Now, Sign Up, Watch More and Apply Now.
-          */         
-          cta: {type: String,value: 'Learn More'},
-          /**
-          * Image url for the Instragram profile icon.
-          */         
-          icon: {type: String,value: 'http://placehold.it/30x30'}
-                   }
-    });
-  </script>
+        Polymer({
+            is: 'mockup-instagram',
+            properties: {
+                /**
+                 * The title of the element is the Instagram name to be used in the mock-up. 
+                 */
+                title: {
+                    type: String,
+                    value: 'jaspersmarket'
+                },
+                /**
+                 * The Call-To-Action button in the mock-up. Current valid CTAs are Book Now, Contact Us, Download, Learn More, Shop Now, Sign Up, Watch More and Apply Now.
+                 */
+                cta: {
+                    type: String,
+                    value: 'Learn More'
+                },
+                /**
+                 * Image url for the Instragram profile icon.
+                 */
+                icon: {
+                    type: String,
+                    value: 'http://placehold.it/30x30'
+                }
+            }
+        });
+    </script>
 </dom-module>
